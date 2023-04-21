@@ -46,7 +46,15 @@ export default {
     {
       title:'Stats',
       name:'stats',
-      type:'stats', 
+      type:'array',
+      of: [
+        {
+          type: 'reference',
+          to:[{type: 'playerStats'}],
+          weak: true
+        }
+
+      ]
     }  
   ],
 }

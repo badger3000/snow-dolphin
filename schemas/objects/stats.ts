@@ -1,8 +1,13 @@
 export default {
-    title:'stats',
-    name: 'stats',
-    type: 'object',
+    title:'Player Stats',
+    name: 'playerStats',
+    type: 'document',
     groups: [
+        {
+            title: 'Game & Player',
+            name: 'gamePlayed',
+            
+        },
         {
             title: 'Offense',
             name: 'offense',
@@ -16,6 +21,22 @@ export default {
 
     ],
     fields: [
+        {
+            title:'Game',
+            name: 'game',
+            type: 'reference',
+            to:[{type: 'games'}],
+            group: 'gamePlayed'
+            
+        },
+        {
+            title:'Player',
+            name: 'player',
+            type: 'reference',
+            to:[{type: 'players'}],
+            group: 'gamePlayed'
+            
+        },
         {
             title: 'Points',
             name:'points',
