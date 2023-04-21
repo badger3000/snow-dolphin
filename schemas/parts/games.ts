@@ -4,22 +4,26 @@ export default {
   type: 'document',
   fields: [
     {
-      title: 'Name',
-      name: 'name',
+      title: 'Title',
+      name: 'title',
       type: 'string',
     },
     {
-      title:'Logo',
-      name:'logo',
-      type:'image',
-      options: {
-        hotspot: true
-      }
+      title: 'Date',
+      name: 'date',
+      type: 'date',
     },
     {
-      title:'Position',
-      name:'position',
-      type:'string'
+      title:'Team 1',
+      name:'team1',
+      type:'reference',
+      to: [{type: 'teams'}]
+    },
+    {
+      title:'Team 2',
+      name:'team2',
+      type:'reference',
+      to: [{type: 'teams'}]
     }
   ],
 }

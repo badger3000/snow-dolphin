@@ -39,6 +39,18 @@ export default {
           {title: 'Division 3', value:'division3'},
         ]
       }
+    },
+    {
+      title: 'Roster',
+      name: 'roster',
+      type:'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{type: 'players'}]
+        }
+      ]
+      
     }
   ],
 }
