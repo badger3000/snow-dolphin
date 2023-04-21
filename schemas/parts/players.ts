@@ -38,10 +38,15 @@ export default {
       }
     },
     {
-      title:'Travel Club',
-      name:'travelClub',
-      type:'string'
-    }
-    
+      title:'Team',
+      name:'team',
+      type:'reference',
+      to:[{type:'teams'}],
+    },
+    {
+      title:'Stats',
+      name:'stats',
+      type:'stats', 
+    }  
   ],
 }
